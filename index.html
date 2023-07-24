@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width,inital-scale=1.0">
+        <title>Expense Tracker App</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- script tag for chart  -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    </head>
+    <body>
+<header><h1>Expense Tracker</h1></header>
+<div class="container">
+    <h4>your balance</h4>
+    <h1 id="balance">$0.00</h1>
+
+<div class="exp-in">
+    <div class="incRemove hidden">
+        <h4>Income</h4>
+        <p class="plus">+$0.00</p>
+        
+    </div>
+    <div class="expRemove hidden">
+        <h4>Expense</h4>
+        <p class="minus">-$0.00</p> 
+    </div>
+    <button class="expense">Expense</button>
+    <button class="income">Income</button>
+</div>
+<h3>
+    Add new Transaction
+</h3>
+<form id="form">
+    <div>
+        <lebel for="text">Name:</lebel><br>
+        <input type="text" id="text" placeholder="Name of transation">
+    </div>
+    <div>
+        <lebel for="amount">Amount:</lebel><br>
+        <input type="number" id="amount" placeholder="Amount">
+    </div>
+    <button class="btns"><i class="fa-solid fa-circle-plus fa-2xl"></i></button>
+</form>
+<div style="max-width: 600px; margin: 0 auto;">
+    <canvas id="incomeExpenseChart" width="400" height="200"></canvas>
+  </div>
+<h3>History</h3>
+<ul id="list">
+    <li>Food<span>-20</span></li>
+</ul>
+</div>
+    </body>
+    <script src="script.js"></script>
+</html>
